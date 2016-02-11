@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+ 
+body {
+	background-color: #123318;
+}
+
+h1 {
+	font-family: 'Great Vibes';
+	color: #C7383A;
+	margin: 20px;
+}
+
+h2 {
+	font-family: 'Poiret One';
+	color: #78A384;
+}
+
+.master-nav {
+	font-family: 'Poiret One';
+}
+
+.container {
+ 	margin: 5px;
+}
+
+p {
+	font-family: 'Poiret One';
+	color:#C2B9AF;
+}
+
