@@ -29,6 +29,22 @@ h2 {
 	color: #78A384;
 }
 
+h3 {
+	font-family: 'Poiret One';
+	color:#C2B9AF;
+}
+
+ul {
+	font-family: 'Poiret One';
+	color:#C2B9AF;
+}
+
+.note {
+	font-style: italic;
+	font-family: 'Poiret One';
+	color:#C2B9AF;
+}
+
 .master-nav {
 	font-family: 'Poiret One';
 }
@@ -37,7 +53,12 @@ h2 {
  	margin: 5px;
 }
 
-p {
+.mid-container {
+	width: 50%;
+	margin: auto;
+}
+
+.text {
 	font-family: 'Poiret One';
 	color:#C2B9AF;
 }
