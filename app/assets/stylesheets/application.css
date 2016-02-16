@@ -15,12 +15,16 @@
  */
  
 body {
+	background-image: url("/imgs/bfly.jpg");
+	background-size: cover;
 	background-color: #123318;
 }
 
 h1 {
 	font-family: 'Great Vibes';
-	color: #C7383A;
+	/*color: #C7383A;*/
+	color: #FF0033;
+	font-size: 3.5em;
 	margin: 20px;
 }
 
