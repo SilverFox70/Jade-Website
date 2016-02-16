@@ -20,6 +20,18 @@ body {
 	background-color: #123318;
 }
 
+.panel-transparent {
+	background: none;
+}
+
+.panel-transparent .panel-heading{
+	background: rgba(10, 10, 10, 0.7)!important;
+}
+
+.panel-transparent .panel-body{
+	background: rgba(5, 5, 5, 0.7)!important;
+}
+
 h1 {
 	font-family: 'Great Vibes';
 	/*color: #C7383A;*/
