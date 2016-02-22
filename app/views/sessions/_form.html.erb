@@ -1,0 +1,122 @@
+<%= form_for(@session) do |f| %>
+  <% if @session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@session.errors.count, "error") %> prohibited this session from being saved:</h2>
+
+      <ul>
+      <% @session.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label "Can I leave a message at this number? Check box only if yes." %>
+    <%= f.check_box(:leave_message) %>
+  </div>
+  <div class="field">
+    <%= f.label "If you didn't check above, please explain." %><br>
+    <%= f.text_area :message_explanation %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label "Email confirmation" %><br>
+    <%= f.text_field :email_confirm %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :"How did you find me?" %><br>
+    <%= f.text_area :how_found %>
+  </div>
+  <h3>Schedule a Time</h3>
+  <div class="field">
+    <p> My availability is: </p>
+    <p> Tue - Fri : 10am - 8pm </p>
+    <p> Sat : 12pm - 8pm </p>
+    <p> Same day appointments require at least a 2 hour notice </p>
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.time_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label "Why would you like to book this session?" %><br>
+    <%= f.text_area :why_session %>
+  </div>
+  <h3>References:</h3>
+  <div class="field">
+    <%= f.label "Name of you reference provider" %><br>
+    <%= f.text_field :reference_name %>
+  </div>
+  <div class="field">
+    <%= f.label "Her email" %><br>
+    <%= f.text_field :reference_email %>
+  </div>
+  <div class="field">
+    <%= f.label "Her phone number" %><br>
+    <%= f.text_field :reference_phone %>
+  </div>
+  <div class="field">
+    <%= f.label "A link to her site" %><br>
+    <%= f.text_field :reference_link %>
+  </div>
+  <div class="field">
+    <%= f.label "Tell me something that would help her to remember you by" %><br>
+    <%= f.text_area :reference_identifier %>
+  </div>
+  <h3>Other references</h3>
+  <p>If you don't have a provider reference</p>
+  <div class="field">
+    <%= f.label "URL for your LinkedIn account" %><br>
+    <%= f.text_field :social_link_1 %>
+  </div>
+  <p>OR</p>
+  <div class="field">
+    <%= f.label "URL for your Facebook account" %><br>
+    <%= f.text_field :social_link_2 %>
+  </div>
+  <div class="field">
+    <p>With reference to CA Penal Code section 647(b), CALJIC No. 16.420 and all pertinent codes and laws in the area where we will be meeting, the services discussed herein do not in any way include or relate to either: (1) engagement in any lewd act for money or other consideration, or (2) Solicitation, offer, or agreement to engage in any lewd act for money or other consideration.  </p>
+    <%= f.label "By checking the box you understand and agree to this statement." %>
+    <%= f.check_box :service_agreement %>
+  </div>
+  <div class="field">
+    <p>An appointment for pleasure is still a business appointment. Jade Reine requires 24-hour notice by phone (not email or text) for any cancellations or re-scheduling. If less than 24-hours is given (without a sensible reason), Jade Reine reserves the right to refuse to see the client in the future unless the future session is pre-paid by credit card. Similarly, if a client is a no-show/no-call and does not call to explain the reason within 12-hours, the client will immediately be black-listed and all relevant contact info will be posted to the appropriate lists, forums, and websites for unreliable clients. Thank you for your cooperation.</p>
+    <%= f.label "I have read and understand the cancellation/re-schedule/no-show policy"%>
+    <%= f.check_box :cancellation_policy %>
+  </div>
+  <div class="field">
+    <p>To avoid spammers, please answer the following question: If tomorrow is Thursday, what day is today?</p>
+    <%= f.label "Answer" %><br>
+    <%= f.text_field :spam_question %>
+  </div>
+  <div class="field">
+    <p>You understand that Jade Reine's studio is in Berkeley, CA, in the San Francisco Bay Area.</p>
+    <%= f.label "I understand." %>
+    <%= f.check_box :location_aware %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
