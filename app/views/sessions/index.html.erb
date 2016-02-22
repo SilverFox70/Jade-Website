@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sessions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Phone number</th>
+      <th>Leave message</th>
+      <th>Message explanation</th>
+      <th>Email</th>
+      <th>Email confirm</th>
+      <th>Age</th>
+      <th>How found</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Why session</th>
+      <th>Reference name</th>
+      <th>Reference email</th>
+      <th>Reference phone</th>
+      <th>Reference link</th>
+      <th>Reference identifier</th>
+      <th>Social link 1</th>
+      <th>Social link 2</th>
+      <th>Service agreement</th>
+      <th>Cancellation policy</th>
+      <th>Spam question</th>
+      <th>Location aware</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sessions.each do |session| %>
+      <tr>
+        <td><%= session.first_name %></td>
+        <td><%= session.last_name %></td>
+        <td><%= session.phone_number %></td>
+        <td><%= session.leave_message %></td>
+        <td><%= session.message_explanation %></td>
+        <td><%= session.email %></td>
+        <td><%= session.email_confirm %></td>
+        <td><%= session.age %></td>
+        <td><%= session.how_found %></td>
+        <td><%= session.date %></td>
+        <td><%= session.time %></td>
+        <td><%= session.why_session %></td>
+        <td><%= session.reference_name %></td>
+        <td><%= session.reference_email %></td>
+        <td><%= session.reference_phone %></td>
+        <td><%= session.reference_link %></td>
+        <td><%= session.reference_identifier %></td>
+        <td><%= session.social_link_1 %></td>
+        <td><%= session.social_link_2 %></td>
+        <td><%= session.service_agreement %></td>
+        <td><%= session.cancellation_policy %></td>
+        <td><%= session.spam_question %></td>
+        <td><%= session.location_aware %></td>
+        <td><%= link_to 'Show', session %></td>
+        <td><%= link_to 'Edit', edit_session_path(session) %></td>
+        <td><%= link_to 'Destroy', session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Session', new_session_path %>

@@ -72,6 +72,16 @@ ul {
 	color:#C2B9AF;
 }
 
+th {
+	color: #C2B9AF;
+}
+
+.field {
+	font-family: 'Poiret One';
+	font-weight: bold;
+	color: #78A384;
+}
+
 .note {
 	font-style: italic;
 	font-family: 'Poiret One';
@@ -92,6 +102,11 @@ ul {
 }
 
 .text {
+	font-family: 'Poiret One';
+	color:#C2B9AF;
+}
+
+p {
 	font-family: 'Poiret One';
 	color:#C2B9AF;
 }
