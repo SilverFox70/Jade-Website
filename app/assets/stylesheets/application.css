@@ -24,6 +24,10 @@ body {
 	background: none;
 }
 
+.panel-solid {
+	background-color: black;
+}
+
 .panel-transparent .panel-heading{
 	background: rgba(10, 10, 10, 0.7)!important;
 }
