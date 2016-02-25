@@ -18,6 +18,7 @@ body {
 	/*background-image: url("/imgs/bfly.jpg");*/
 	/*height: 100%;*/
 	background-size: cover;
+	background-repeat: no-repeat;
 	background-color: #123318;
 }
 
@@ -39,7 +40,7 @@ body {
 
 .enter {
 	padding: 0;
-	margin: auto;
+	margin-left: 25%;
 	font-size: 1.5em;
 	font-family: 'Poiret One';
 	color:#C2B9AF;
