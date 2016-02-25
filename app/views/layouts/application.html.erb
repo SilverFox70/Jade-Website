@@ -32,7 +32,9 @@
 			<div class="header-text">
 				<h1>Intimate Journeys</h1>
 			</div>
-			<%= render "shared/nav" %>
+			<% if !current_page?(controller: 'welcome') %>
+				<%= render "shared/nav" %>
+			<% end %>	
 		</header>
 		<div class="container">
 			<%= yield %>
