@@ -22,12 +22,19 @@
 	  <%= csrf_meta_tags %>
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
-	<body>
+	<% if current_page?(controller: 'welcome') %>
+		<% @back_image = "/imgs/orchid.jpg" %>
+		<% else %>
+		<% @back_image = "/imgs/bfly.jpg" %>
+	<% end %>
+	<body style="background-image: url(<%=@back_image%>);">
 		<header>
 			<div class="header-text">
 				<h1>Intimate Journeys</h1>
 			</div>
-			<%= render "shared/nav" %>
+			<% if !current_page?(controller: 'welcome') %>
+				<%= render "shared/nav" %>
+			<% end %>	
 		</header>
 		<div class="container">
 			<%= yield %>
